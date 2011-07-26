@@ -5,6 +5,9 @@
 
 var express = require('express');
 
+var _ = require('underscore')._,
+    backbone = require('backbone');
+
 var app = module.exports = express.createServer();
 
 // Configuration
