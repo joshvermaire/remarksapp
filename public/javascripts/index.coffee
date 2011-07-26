@@ -1,14 +1,17 @@
-exports.Remark = Backbone.Model.extend
-	defaults:
-		type: 'text'
+$ ->
+	Remark = Backbone.Model.extend
+		defaults:
+			type: 'text'
 
-exports.Remarks = Backbone.Collection.extend
-	model: Remark
+	Remarks = Backbone.Collection.extend
+		model: Remark
 
-exports.RemarksView = Backbone.View.extend
-	events:
-		"click": "test"
+	RemarksView = Backbone.View.extend
+		el: '#app'
+		events:
+			"click": "test"
 
-	test: ->
-		console.log 'yes'
+		test: ->
+			alert 'yes'
 
+	new RemarksView

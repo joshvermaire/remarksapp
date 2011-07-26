@@ -1,18 +1,23 @@
 (function() {
-  exports.Remark = Backbone.Model.extend({
-    defaults: {
-      type: 'text'
-    }
-  });
-  exports.Remarks = Backbone.Collection.extend({
-    model: Remark
-  });
-  exports.RemarksView = Backbone.View.extend({
-    events: {
-      "click": "test"
-    },
-    test: function() {
-      return console.log('yes');
-    }
+  $(function() {
+    var Remark, Remarks, RemarksView;
+    Remark = Backbone.Model.extend({
+      defaults: {
+        type: 'text'
+      }
+    });
+    Remarks = Backbone.Collection.extend({
+      model: Remark
+    });
+    RemarksView = Backbone.View.extend({
+      el: '#app',
+      events: {
+        "click": "test"
+      },
+      test: function() {
+        return alert('yes');
+      }
+    });
+    return new RemarksView;
   });
 }).call(this);
